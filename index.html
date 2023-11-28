@@ -10,23 +10,28 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Griglia Campo Minato</title>
 </head>
-<body>
-    <div class="container-fluid">
-        <header>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/mobile-logo.png" alt="" width="80" height="80">
-                      </a>
-                      <h1 class="fw-bold fs-2">Campo Minato</h1>
-                </div>
-                <button class="btn bg-secondary text-white" onclick="start_game();">Play</button>
+<body class="position-relative">
+    <header class="mx-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                    <img src="img/mobile-logo.png" alt="" width="80" height="80">
+                  </a>
+                  <h1 class="fw-bold fs-2">Campo Minato</h1>
             </div>
-        </header>
-        <div id="grid">
+            <button class="btn bg-secondary text-white" onclick="start_game();">Play</button>
         </div>
+    </header>
+    <main>
+        <div class="container-fluid mx-0" id="main_container">
+            <div id="grid">
+            </div>
         
-    </div>
+        </div>
+    </main>
+    <footer class="py-4 mx-4 position-fixed bottom-0 left-0">
+        <h5>Made with <span>&hearts;</span> by <a href="#">Boolean</a></h5>
+    </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
