@@ -3,6 +3,11 @@ const caselle=100;
 const layout= document.createElement("div");
 const contenitoreGenerale= document.getElementById("main_container");
 function start_game(){
+    
+    // ASSOCIO LA DIFFICOLTÀ ALLA COSTANTE DIFFICOLTA PER OTTENERE IL VALORE
+    const difficolta= parseInt(document.getElementById("opzioni_difficolta").value);
+    // DEBUG DIFFICOLTA PER VISUALIZZARE IL CORRETTO FUNZIONAMENTO
+    // console.log(difficolta)
     layout.innerHTML=" ";
     layout.classList.add("grid");  
     contenitoreGenerale.append(layout);
