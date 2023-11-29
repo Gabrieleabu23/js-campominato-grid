@@ -7,11 +7,15 @@ function start_game(){
     // ASSOCIO LA DIFFICOLTÀ ALLA COSTANTE DIFFICOLTA PER OTTENERE IL VALORE
     const difficolta= parseInt(document.getElementById("opzioni_difficolta").value);
     // DEBUG DIFFICOLTA PER VISUALIZZARE IL CORRETTO FUNZIONAMENTO
-    console.log(difficolta)
+    // console.log(difficolta)
+    // RIGA PER PULIRE PRIMA DI STAMPARE LA "NUOVA" GRIGLIA  
     layout.innerHTML=" ";
     layout.classList.add("grid");  
     contenitoreGenerale.append(layout);
+    // UN'PÒ DI PADDING SOPRA E SOTTO IN MODO DA AVERE LA GRIGLIA DISTACCATA
     contenitoreGenerale.classList.add("pt-4","pb-4");
+
+    // RIMUOVE POSITION FIXED DATO CHE APPARE LA SCHERMATA DI GIOCO, QUINDI VA AUTOMATICAMENTE SOTTO
     document.querySelector("footer").classList.remove("position-fixed");
     caselle= numeroCaselle(difficolta,caselle);
     for(let i=1; i<=caselle;i++){
@@ -45,6 +49,7 @@ function generateElements(tagtype,classname,difficolta){
     return currentElement;
 }
 
+// FUNZIONE PER SELEZIONARE IN BASE ALLA DIFFICOLTÀ LA DIMENSIONE DEI SINGOLI QUADRATINI
 function typeSquare(difficolta,classname){
     if(difficolta === 0){
         classname= "square";
