@@ -1,11 +1,12 @@
 
 const caselle=100;
 const layout= document.createElement("div");
+const contenitoreGenerale= document.getElementById("main_container");
 function start_game(){
     layout.innerHTML=" ";
     layout.classList.add("grid");  
-    document.getElementById("main_container").append(layout);
-    document.getElementById("main_container").classList.add("pt-4","pb-4");
+    contenitoreGenerale.append(layout);
+    contenitoreGenerale.classList.add("pt-4","pb-4");
     document.querySelector("footer").classList.remove("position-fixed");
     for(let i=1; i<=caselle;i++){
         const div= generateElements("div","square");
